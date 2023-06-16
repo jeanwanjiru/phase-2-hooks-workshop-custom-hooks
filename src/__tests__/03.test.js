@@ -12,8 +12,8 @@ describe("Exercise 03", () => {
   test("returns the mouse coordinates after the mouse has moved", () => {
     const { result } = renderHook(() => useMouseCoordinates());
     fireEvent.mouseMove(window, {
-      clientX: 100,
-      clientY: 200,
+      "clientX": 100,
+      "clientY": 200,
     });
     expect(result.current).toMatchObject({ clientX: 100, clientY: 200 });
   });

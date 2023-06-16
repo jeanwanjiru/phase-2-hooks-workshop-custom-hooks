@@ -33,7 +33,7 @@ describe("Exercise 04 - Bonus 1", () => {
   test("works with arrays", () => {
     const value = [1, 2, 3];
     const { result } = renderHook(() => useLocalStorage("test", value));
-    const [state, setState] = result.current;
+    const [state, setState] = results.current;
     expect(state).toMatchObject(value);
     expect(localStorage.__STORE__["test"]).toBe(JSON.stringify(value));
 
